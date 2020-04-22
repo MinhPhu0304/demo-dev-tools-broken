@@ -59,7 +59,5 @@
   },
   "include": [
     "./src",
-    "./test",
-    "./mocks"
   ]
 }
