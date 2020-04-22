@@ -8,14 +8,18 @@ export interface IncrementAction extends Action {
 }
 export interface DecrementAction extends Action {
     type: 'DECREMENT';
+    payload: number | null;
 }
 
 export const increment: ActionCreator<IncrementAction> = () => ({
-    type: INCREMENT
+    type: INCREMENT,
 });
 
-export const decrement: ActionCreator<DecrementAction> = () => ({
-    type: DECREMENT
-});
+export const decrement: ActionCreator<DecrementAction> = () => {
+    return {
+        type: DECREMENT,
+        payload: 1,
+    };
+};
 
 export type CounterAction = IncrementAction | DecrementAction;
