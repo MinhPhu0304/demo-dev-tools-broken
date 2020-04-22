@@ -9,12 +9,10 @@ const configureStore = (initialState?: RootState): Store<RootState | undefined> 
     return createStore(rootReducer, initialState, enhancer);
 };
 
-const store = configureStore();
+export const store = configureStore();
 
 if (typeof module.hot !== 'undefined') {
     module.hot.accept('../reducers', () =>
         store.replaceReducer(require('../reducers').rootReducer)
     );
 }
-
-export default store;

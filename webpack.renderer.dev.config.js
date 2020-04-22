@@ -1,3 +1,4 @@
+const path = require('path')
 const merge = require('webpack-merge');
 const spawn = require('child_process').spawn;
 
@@ -21,6 +22,8 @@ module.exports = merge.smart(baseConfig, {
             verbose: true,
             disableDotRule: false
         },
+        contentBase: path.join(__dirname, 'assets'),
+        contentBasePublicPath: '/',
         before() {
             if (process.env.START_HOT) {
                 console.log('Starting main process');

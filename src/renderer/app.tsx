@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 
 import Application from './components/Application';
-import store from './store';
+import { store } from './store';
 
 const mainElement = document.getElementById('app');
 
