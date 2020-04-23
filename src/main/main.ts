@@ -3,7 +3,8 @@ import * as path from 'path';
 import * as url from 'url';
 
 let win: BrowserWindow | null;
-app.userAgentFallback = 'Chrome/79.0.3945.79'; // Broke the redux dev tools if set to this version
+app.userAgentFallback =
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.113 Safari/537.36'; // Broke the redux dev tools if set to this version
 const installExtensions = async () => {
     const installer = require('electron-devtools-installer');
     const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
